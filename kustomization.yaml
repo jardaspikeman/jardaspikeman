@@ -1,14 +1,7 @@
-cat <<EOF >./kustomization.yaml
 secretGenerator:
 - name: mysql-pass
   literals:
-  - password=123456
-EOF
-
-
-
-cat <<EOF >>./kustomization.yaml
+  - password=test123
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
-EOF
